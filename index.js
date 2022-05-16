@@ -1,10 +1,11 @@
-let initialVal = document.getElementById("initial-val").textContent; 
 let meterToFeet = document.getElementById("value-mf");
 let feetToMeter = document.getElementById("value-fm");
-let literToGaloon = document.getElementById("value-lg");
-let galoonToLiter = document.getElementById("value-gl");
+let literToGallon = document.getElementById("value-lg");
+let gallonToLiter = document.getElementById("value-gl");
 let kiloToPound = document.getElementById("value-kp");
 let poundToKilo = document.getElementById("value-pk");
+
+let initialVal = document.getElementById("initial-val").textContent; 
 
 function toFeet(){
     let feet = initialVal * 3.281;
@@ -20,18 +21,18 @@ function toMeter(){
     console.log(feetToMeter);
 }
 
-function toGaloon(){
-    let galoon = initialVal / 3.785;
-    let result = galoon.toFixed(3);
-    literToGaloon.textContent = initialVal + " liters = " + result + " galoons"
-    console.log(literToGaloon);
+function toGallon(){
+    let gallon = initialVal / 3.785;
+    let result = gallon.toFixed(3);
+    literToGallon.textContent = initialVal + " liters = " + result + " gallons"
+    console.log(literToGallon);
 }
 
 function toLiter(){
     let liter = initialVal * 3.785;
     let result = liter.toFixed(3);
-    galoonToLiter.textContent = initialVal + " galoons = " + result + " liters"
-    console.log(galoonToLiter);
+    gallonToLiter.textContent = initialVal + " gallons = " + result + " liters"
+    console.log(gallonToLiter);
 }
 
 function toPound(){
@@ -50,7 +51,7 @@ function toKilo(){
 
 toFeet();
 toMeter();
-toGaloon();
+toGallon();
 toLiter();
 toPound();
 toKilo();
